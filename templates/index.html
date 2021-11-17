@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<h1>欢迎来到用户管理系统！</h1>
+<table cellspacing="0" border="1">
+    <tr>
+        <td>编号</td>
+        <td>用户名</td>
+        <td>密码</td>
+    </tr>
+    {% for user in user %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.password }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
